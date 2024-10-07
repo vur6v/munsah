@@ -1,0 +1,367 @@
+/* إعدادات عامة */
+body {
+    background-color: #121212;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* العنوان الرئيسي والمنصة */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    direction: rtl;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #ffffff;
+    margin-left: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    position: relative;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+}
+
+nav ul li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: #ffcc00;
+    transition: width 0.3s ease;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* تأثير الكتابة */
+.typing {
+    font-size: 2.5rem;
+    border-right: 2px solid #ffcc00;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    animation: typing 3s steps(30) 1s forwards, blink 0.7s infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+/* النص التعريفي */
+.description {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    opacity: 0;
+    animation: fadeIn 2s 4s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* زر التسجيل */
+.register-button {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 20px;
+    background-color: #ffcc00;
+    color: #121212;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.register-button:hover {
+    background-color: #ffaa00;
+}
+
+/* قسم الدورات المقدمة */
+.courses {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #1e1e1e;
+    display: flex;
+    flex-wrap: wrap; /* السماح بتداخل العناصر */
+    justify-content: center; /* توسيط العناصر */
+}
+
+.courses h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    width: 100%; /* لجعل العنوان في صف كامل */
+}
+
+.course {
+    margin: 15px;
+    padding: 15px;
+    background-color: #2e2e2e;
+    border-radius: 5px;
+    width: 250px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease; /* تأثير الانتقال */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5); /* ظل خلف الأقسام */
+}
+
+.course:hover {
+    transform: scale(1.05);
+    background-color: #3e3e3e;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.7); /* تكبير الظل عند مرور الماوس */
+}
+
+
+/* خلفيات لكل دورة */
+.course:nth-child(1) {
+    background-image: url('path/to/robotics-game.PNG'); /* تغيير المسار إلى صورة الخلفية للروبوتات */
+}
+
+.course:nth-child(2) {
+    background-image: url('path/to/web-development-background.jpg'); /* تغيير المسار إلى صورة الخلفية لتطوير المواقع */
+}
+
+.course:nth-child(3) {
+    background-image: url('path/to/games-background.jpg'); /* تغيير المسار إلى صورة الخلفية للألعاب */
+}
+
+.course:hover {
+    transform: scale(1.05); /* تكبير خفيف عند الملامسة */
+    background-color: rgba(62, 62, 62, 0.8); /* تغيير لون الخلفية عند الملامسة */
+}
+
+/* مساحة إضافية للتمرير */
+.spacer {
+    height: 800px; /* يمكنك ضبط الارتفاع حسب الحاجة */
+}
+/* إعدادات عامة */
+body {
+    background-color: #121212;
+    font-family: 'Arial', sans-serif;
+    color: #ffffff; /* لون النص الأساسي */
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* العنوان الرئيسي والمنصة */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    direction: rtl;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #ffcc00; /* تغيير لون عنوان المنصة */
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #ffffff; /* تغيير لون الروابط في القائمة */
+    text-decoration: none;
+    font-size: 1.2rem;
+    position: relative;
+}
+
+/* تأثير الكتابة */
+.typing {
+    font-size: 2.5rem;
+    border-right: 2px solid #ffcc00; /* لون المؤشر في الكتابة */
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    animation: typing 3s steps(30) 1s forwards, blink 0.7s infinite;
+}
+
+.description {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    color: #cccccc; /* تغيير لون النص التعريفي */
+    opacity: 0;
+    animation: fadeIn 2s 4s forwards;
+}
+
+/* زر التسجيل */
+.register-button {
+    background-color: #ffcc00;
+    color: #121212; /* لون نص زر التسجيل */
+}
+
+/* قسم الدورات المقدمة */
+.course h3 {
+    margin: 0 0 10px;
+    font-size: 1.5rem;
+    color: #ffffff; /* تغيير لون عنوان الدورة */
+}
+/* تأثير الانميشن لكلمة منصة كود */
+.animated-title {
+    font-size: 3rem;
+    color: #ffcc00; /* لون النص */
+    opacity: 0; /* بدءاً بالشفافية */
+    transform: translateY(-20px); /* بدءاً من موضع أعلى */
+    animation: fadeInUp 1s forwards; /* إضافة تأثير الانميشن */
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1; /* الانتهاء بوضوح كامل */
+        transform: translateY(0); /* العودة إلى الموضع الطبيعي */
+    }
+}
+
+/* قسم التواصل معنا */
+.contact-us {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #1e1e1e;
+    color: #ffffff;
+    text-align: center;
+}
+
+.contact-us h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+/* مربعات التواصل */
+.contact-box {
+    background-color: #ffffff;
+    color: #121212;
+    margin: 10px auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* روابط التواصل */
+.contact-link {
+    color: #121212;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+    color: #ffaa00;
+}
+/* قسم التواصل معنا */
+.contact-us {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #2c2c2c; /* خلفية داكنة لقسم التواصل */
+    color: #ffffff;
+    text-align: center;
+}
+
+.contact-us h2 {
+    font-size: 2rem; /* حجم أصغر للعناوين */
+    margin-bottom: 20px;
+    color: #ffcc00; /* لون العنوان */
+}
+
+/* تحسين شكل المربعات بحجم أصغر */
+.contact-box {
+    background-color: #ffffff;
+    color: #2c2c2c;
+    margin: 10px auto;
+    padding: 10px; /* تقليل التباعد الداخلي */
+    border-radius: 8px;
+    width: 250px; /* تقليل العرض */
+    transition: transform 0.4s ease, box-shadow 0.4s ease; /* تأثير الانتقال */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* ظل بسيط */
+}
+
+.contact-box:hover {
+    transform: scale(1.03); /* تكبير طفيف عند مرور الماوس */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15); /* ظل أكبر عند التمرير */
+}
+
+/* تحسين شكل الروابط */
+.contact-link {
+    color: #2c2c2c;
+    text-decoration: none;
+    font-size: 1.2rem; /* حجم أصغر للنص */
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+    color: #ffaa00; /* تغيير اللون عند تمرير الماوس */
+}
+
+/* إضافة أنيميشن لتظهر المربعات تدريجيًا */
+.contact-box {
+    opacity: 0;
+    animation: fadeIn 1s ease forwards; /* ظهور تدريجي عند التحميل */
+}
+
+.contact-box:nth-child(1) {
+    animation-delay: 0.2s; /* تأخير بسيط للمربع الأول */
+}
+
+.contact-box:nth-child(2) {
+    animation-delay: 0.4s; /* تأخير للمربع الثاني */
+}
+
+/* تعريف حركة fadeIn */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+html {
+    scroll-behavior: smooth; /* تفعيل التنقل السلس */
+}
